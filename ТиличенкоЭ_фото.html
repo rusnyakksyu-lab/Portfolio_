@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Фото - Портфолио Тиличенко Элины</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portfoliostyle.css" />
+</head>
+<body>
+
+<div class="page-grid">
+    <header class="main-header">
+        <h1>Тиличенко Элина</h1>
+        <nav>
+            <ul>
+                <li><a href="ТиличенкоЭ_главная.html">обо мне</a></li>
+                <li><a href="ТиличенкоЭ_фото.html">фото</a></li>
+                <li><a href="ТиличенкоЭ_видео.html">видео</a></li>
+                <li><a href="#contacts">контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero-title">
+        <h2>Портфолио Тиличенко Элины</h2>
+        <p>графический дизайнер</p>
+    </div>
+    <div class="photo-head">
+        <img src="img/изображения/для.шапки.png" alt="ШАПКА"/>
+    </div>
+
+    <div class="text-gallery">
+                    
+                    <p>Я очень люблю фотографировать. Не для отчётов и не для соцсетей, а для себя. В путешествиях это превращается в настоящий квест: увидеть неочевидное, поймать необычный ракурс, заметить игру света там, где другие пройдут мимо.
+
+    Моя камера непрофессиональная, и в этом её суперсила. Она не отвлекает на настройки, не пугает людей своим видом. Она просто помогает мне быть внимательной к деталям. А умение находить интересные кадры — оно ведь не в технике, оно в голове и в умении смотреть.</p></div>
+
+    <div class="gallery-intro">
+        <p>"Я собираю путешествия не в сувенирах, а в интересных кадрах, которые никто, кроме меня, не заметил"</p>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item"><img src="img/изображения/церковь.jpg" alt="Фото 1"></div>
+        <div class="gallery-item"><img src="img/изображения/колесо.оборзения.jpg" alt="Фото 2"></div>
+        <div class="gallery-item"><img src="img/изображения/звезда.jpg" alt="Фото 3"></div>
+        <div class="gallery-item"><img src="img/изображения/карусель.jpg" alt="Фото 4"></div>
+        <div class="gallery-item"><img src="img/изображения/дерево.выборг.jpg" alt="Фото 5"></div>
+        <div class="gallery-item"><img src="img/изображения/колонны.jpg" alt="Фото 6"></div>
+        <div class="gallery-item"><img src="img/изображения/карусель.и.я.jpg" alt="Фото 7"></div>
+        <div class="gallery-item"><img src="img/изображения/кафе.jpg" alt="Фото 8"></div>
+        <div class="gallery-item"><img src="img/изображения/пруд.jpg" alt="Фото 9"></div>
+        <div class="gallery-item"><img src="img/изображения/лес.jpg" alt="Фото 10"></div>
+        <div class="gallery-item"><img src="img/изображения/мы.jpg" alt="Фото 11"></div>
+        <div class="gallery-item"><img src="img/изображения/новый.год.jpg" alt="Фото 12"></div>
+    </div>
+
+    <div class="random-carousel">
+        <div class="carousel-header">
+            <p>несколько моих проектов в рамках обучения</p>
+        </div>
+        <div class="carousel-inner">
+            <button class="carousel-button prev" type="button" aria-label="Предыдущее">‹</button>
+            <div class="carousel-window">
+                <div class="carousel-items">
+    
+                    <img class="carousel-item far-prev" alt="Фото">
+                    <img class="carousel-item prev" alt="Фото">
+                    <img class="carousel-item active" alt="Фото">
+                    <img class="carousel-item far-next" alt="Фото">
+                </div>
+            </div>
+            <button class="carousel-button next" type="button" aria-label="Следующее">›</button>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer" id="contacts">
+    <div class="footer-info">
+        <p>Тиличенко Элина</p>
+        <p>email: tilichenkoelia@mail.ru</p>
+    </div>
+    <a href="#modal" class="footer-btn">Задать вопрос</a>
+</footer>
+
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Задать вопрос</h3>
+            <a href="#" class="modal-close">&times;</a>
+        </div>
+        <form class="form">
+            <div class="form-group">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required placeholder="Иван Иванов">
+            </div>
+            <div class="form-group">
+                <label for="email">Email для ответа:</label>
+                <input type="email" id="email" name="email" required placeholder="ivan@example.com">
+            </div>
+            <div class="form-group">
+                <label for="subject">Тема вопроса:</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Выберите тему</option>
+                    <option value="design">Дизайн-проект</option>
+                    <option value="price">Стоимость услуг</option>
+                    <option value="deadline">Сроки выполнения</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Ваш вопрос:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Опишите ваш вопрос подробнее..."></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-checkbox">
+                    <input type="checkbox" required>
+                    Я согласен на обработку персональных данных
+                </label>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" class="form-submit">Отправить вопрос</button>
+                <a href="#" class="form-cancel">Отмена</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

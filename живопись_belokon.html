@@ -1,0 +1,397 @@
+Вот исправленный HTML-код, в котором футер поднят на 100 пикселей вверх за счёт уменьшения отступа после кнопки «хочу!».
+
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Владислава Белокон | Живопись</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #213242;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ЗАКРЕПЛЁННЫЙ HEADER */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 67px;
+            background-color: #2C455B;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-container {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* стили для ссылок-кнопок (полностью повторяют поведение .nav-btn) */
+        .nav-link {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 400;
+            font-size: 16pt;
+            color: #C5C7CB;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover {
+            color: #DDFF00;
+        }
+
+        /* Основной контент - растягивается на всю доступную высоту */
+        .main-content {
+            padding-top: 67px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mod-image-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .grid-section {
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 457px 487px;
+            gap: 50px;
+            grid-template-rows: 131px 451px 37px 76px 343px 135px 16px 365px;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .grid-text {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: justify;
+            width: 100%;
+            line-height: 1.4;
+        }
+
+        .grid-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .item-11 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .item-span-21-41 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 5;
+        }
+
+        .item-51 {
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+        }
+
+        .item-span-61-68 {
+            grid-column: 1 / 2;
+            grid-row: 6 / 9;
+        }
+
+        .item-span-12-22 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+
+        .item-32 {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+
+        .item-span-42-62 {
+            grid-column: 2 / 3;
+            grid-row: 4 / 7;
+        }
+
+        .item-27 {
+            grid-column: 2 / 3;
+            grid-row: 7 / 8;
+        }
+
+        .item-28 {
+            grid-column: 2 / 3;
+            grid-row: 8 / 9;
+        }
+
+        /* Кнопка "хочу!" — текст на расстоянии 30px от верха */
+        .want-button-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .want-btn {
+            width: 615px;
+            height: 95px;
+            background-color: #8C9935;
+            border-radius: 45px;
+            display: flex;
+            align-items: flex-start;      /* выравнивание по верхнему краю */
+            justify-content: center;
+            cursor: pointer;
+            transition: box-shadow 0.2s ease-in-out;
+            position: relative;
+        }
+
+        .want-btn span {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 400;
+            font-size: 72px;
+            color: #FFFFFF;
+            margin-top: 5px;
+            line-height: 1;
+        }
+
+        .want-btn:hover {
+            box-shadow: 10px 10px 0 #DDFF00;
+        }
+
+        /* FOOTER - поднят на 130px выше */
+        .footer {
+            position: relative;
+            top: calc(0px + 67px);
+            width: 100%;
+            height: 67px;
+            background-color: #D9D9D9;
+            opacity: 0.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px; /* Вместо 67px делаем отрицательный отступ, чтобы поднять футер */
+        }
+
+        .footer-text {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 400;
+            font-size: 16pt;
+            color: #2C455B;
+            text-align: center;
+            opacity: 1;
+        }
+
+        /* Компенсирующий отступ после кнопки, чтобы футер не налезал на контент */
+        .compensate-margin {
+            height: 30px;
+        }
+
+
+        @media (max-width: 1200px) {
+            .grid-container {
+                transform: scale(0.9);
+                transform-origin: top center;
+            }
+            .want-btn {
+                width: 90%;
+                max-width: 615px;
+                height: auto;
+                min-height: 95px;
+            }
+            .want-btn span {
+                font-size: clamp(40px, 10vw, 72px);
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+            .nav-container {
+                gap: 24px;
+            }
+            .nav-link {
+                font-size: 14px;
+            }
+        }
+
+        /* для совсем маленьких экранов сохраняем отступ сверху */
+        @media (max-width: 600px) {
+            .want-btn span {
+                margin-top: 25px;
+                font-size: 48px;
+            }
+            .want-btn {
+                min-height: 85px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="fixed-header">
+    <div class="nav-container">
+        <!-- ССЫЛКИ вместо кнопок: ведут на указанные файлы в той же папке -->
+        <a href="главная_belokon.html" class="nav-link">ОБО МНЕ</a>
+        <a href="айдентика_belokon.html" class="nav-link">АЙДЕНТИКА</a>
+        <a href="живопись_belokon.html" class="nav-link">ЖИВОПИСЬ</a>
+        <a href="моделирование_belokon.html" class="nav-link">МОДЕЛИРОВАНИЕ</a>
+        <a href="анкета_belokon.html" class="nav-link">ЗАПОЛНИТЬ АНКЕТУ</a>
+    </div>
+</div>
+
+<div class="main-content">
+    <!-- Картинка mod.png с центром на 350px (относительно документа, как в изначальном задании) -->
+    <div style="display: flex; justify-content: center; margin-top: calc(350px - 67px);">
+        <img src="img/belokon/art_belokon.svg" alt="mod" id="modImage" style="display: block; max-width: 100%; height: auto;">
+    </div>
+
+    <!-- Сетка с началом на 817px (динамический margin-top через JS) -->
+    <div class="grid-section" id="gridSection" style="margin-top: 300px;">
+        <div class="grid-container">
+            <div class="grid-item item-11">
+                <div class="grid-text">
+                    Иметь навыки живописи и технического рисунка критически важно для графического дизайнера, так как именно благодаря им можно научиться видеть пластику в образах. Это помогает создавать более живые и цепляющие глаз элементы айдентики , развивает вкус и помогает в поиске оригинальных решений.
+                </div>
+            </div>
+            <div class="grid-item item-span-21-41">
+                <img src="img/belokon/ксюша_belokon.png" alt="Ксения" class="grid-img">
+            </div>
+            <div class="grid-item item-51">
+                <img src="img/belokon/дача_belokon.png" alt="дача" class="grid-img">
+            </div>
+            <div class="grid-item item-span-61-68">
+                <img src="img/belokon/натюрморт_belokon.png" alt="натюрморт" class="grid-img">
+            </div>
+            <div class="grid-item item-span-12-22">
+                <img src="img/belokon/копия_belokon.png" alt="копия" class="grid-img">
+            </div>
+            <div class="grid-item item-32">
+                <div class="grid-text">
+                    Я всегда стараюсь отразить в своих произведениях психологический портрет и эмоциональное состояние.
+                </div>
+            </div>
+             <div class="grid-item item-span-42-62">
+                <img src="img/belokon/автопортрет_belokon.png" alt="автопортрет" class="grid-img">
+            </div>
+            <div class="grid-item item-27">
+                <div class="grid-text">
+                    Посмотрите внимательно: каждая работа - это история.
+                </div>
+            </div>
+            <div class="grid-item item-28">
+                <img src="img/belokon/пристань_belokon.png" alt="пристань" class="grid-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка "хочу!" с центром на 2878px (сохраняем позиционирование, текст прижат к верху на 30px) -->
+    <div class="want-button-wrapper" id="wantButtonWrapper">
+        <div class="want-btn">
+            <span>хочу!</span>
+        </div>
+    </div>
+
+    <!-- Отступ после кнопки — уменьшен на 100 пикселей для поднятия футера -->
+    <div style="height: 0px;"></div>
+
+    <div class="footer">
+        <div class="footer-text">2026. Владислава Белокон</div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // Позиционирование сетки на 817px относительно низа изображения mod.png
+        const modImage = document.getElementById('modImage');
+        const gridSection = document.getElementById('gridSection');
+        const wantWrapper = document.getElementById('wantButtonWrapper');
+        const wantBtn = document.querySelector('.want-btn');
+
+        function positionGrid() {
+            if (modImage && gridSection) {
+                const imgRect = modImage.getBoundingClientRect();
+                const imgBottom = imgRect.bottom + window.scrollY;
+                const targetY = 817; // желаемая позиция верха сетки (относительно документа)
+                let offset = targetY - imgBottom;
+                // минимальный отступ, чтобы сетка не наезжала на изображение
+                if (offset < 50) offset = 50;
+                gridSection.style.marginTop = offset + 'px';
+            }
+        }
+
+        function positionWantButton() {
+            if (gridSection && wantWrapper && wantBtn) {
+                const gridRect = gridSection.getBoundingClientRect();
+                const gridBottom = gridRect.bottom + window.scrollY;
+                // вычисляем высоту кнопки (может меняться на мобильных)
+                const btnHeight = wantBtn.offsetHeight;
+                const targetCenter = 2650; 
+                // Вычисляем нужную позицию верха обертки, чтобы центр кнопки был на targetCenter
+                const targetTop = targetCenter - (btnHeight / 2);
+                let offset = targetTop - gridBottom;
+                if (offset < 50) offset = 80;
+                wantWrapper.style.marginTop = offset + 'px';
+            }
+        }
+
+        function updatePositions() {
+            positionGrid();
+            positionWantButton();
+        }
+
+        if (modImage) {
+            if (modImage.complete) {
+                updatePositions();
+            } else {
+                modImage.onload = updatePositions;
+            }
+        } else {
+            updatePositions();
+        }
+
+        window.addEventListener('resize', () => {
+            setTimeout(updatePositions, 100);
+        });
+
+        // дополнительная страховка для динамических изменений шрифтов/изображений
+        window.addEventListener('load', function() {
+            setTimeout(updatePositions, 50);
+        });
+    })();
+</script>
+
+</body>
+</html>
+```

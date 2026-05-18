@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Владислава Белокон | Портфолио</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #2C455B;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .fixed-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #213242;
+            z-index: -2;
+        }
+
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 67px;
+            background-color: #2C455B;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-container {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 400;
+            font-size: 16pt;
+            color: #C5C7CB;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover {
+            color: #DDFF00;
+        }
+
+        .content {
+            position: relative;
+            top: 67px;
+            width: 100%;
+        }
+
+        /* Все элементы выстраиваются в колонку без наложения */
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .center-img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .rectangle {
+            width: 80%;
+            max-width: 1141px;
+            border: 10px solid #707C3D;
+            background: transparent;
+            border-radius: 60px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 400;
+            font-size: 16pt;
+            color: #C5C7CB;
+            text-align: left;
+            max-width: 500px;
+            line-height: 1.4;
+        }
+
+        .year-text {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 16pt;
+            color: #C5C7CB;
+            text-align: left;
+        }
+
+        .edu-text {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 16pt;
+            color: #C5C7CB;
+            text-align: left;
+            white-space: pre-line;
+            line-height: 1.4;
+        }
+
+        .contacts-card {
+            width: 1002px;
+            max-width: 90%;
+            height: 192px;
+            background-color: #C5C7CB;
+            border-radius: 45px;
+            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+            margin: 0 auto;
+        }
+
+        .social-icon {
+            cursor: pointer;
+            transition: filter 0.2s ease;
+        }
+
+        .social-icon:hover {
+            filter: drop-shadow(5px 10px 10px #DDFF00);
+        }
+
+        .footer {
+            width: 100%;
+            height: 67px;
+            background-color: #D9D9D9;
+            opacity: 0.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 67px;
+        }
+
+        .footer-text {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 400;
+            font-size: 16pt;
+            color: #2C455B;
+            text-align: center;
+            opacity: 1;
+        }
+
+        /* Отступы между секциями */
+        .spacing-1 { margin-top: 67px; }
+        .spacing-2 { margin-top: 50px; }
+        .spacing-3 { margin-top: 80px; }
+        .spacing-4 { margin-top: 60px; }
+        .spacing-5 { margin-top: 40px; }
+
+        /* Блок с текстом "обо мне" */
+        .about-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .about-text-block {
+            max-width: 500px;
+        }
+
+        /* Контейнер для иконок поверх карточки */
+        .social-container {
+            position: relative;
+            width: 1002px;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .social-icons-wrapper {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container { gap: 20px; }
+            .nav-link { font-size: 12pt; white-space: normal; }
+            .about-wrapper { gap: 30px; }
+            .about-text { font-size: 12pt; }
+            .social-icons-wrapper { bottom: 20px; gap: 20px; }
+            .social-icon { width: 40px; }
+        }
+    </style>
+</head>
+<body>
+<div class="fixed-bg"></div>
+
+<div class="fixed-header">
+    <div class="nav-container">
+        <a href="главная_belokon.html" class="nav-link">ОБО МНЕ</a>
+        <a href="айдентика_belokon.html" class="nav-link">АЙДЕНТИКА</a>
+        <a href="живопись_belokon.html" class="nav-link">ЖИВОПИСЬ</a>
+        <a href="моделирование_belokon.html" class="nav-link">МОДЕЛИРОВАНИЕ</a>
+        <a href="анкета_belokon.html" class="nav-link">ЗАПОЛНИТЬ АНКЕТУ</a>
+    </div>
+</div>
+
+<div class="content">
+    <div class="abs-container" style="position: relative; min-height: 1700px;">
+
+        <img src="img/belokon/2026_belokon.svg" alt="2026" style="position: absolute; top: 67px; left: 50%; transform: translateX(-50%);">
+
+        <img src="img/belokon/pf_belokon.svg" alt="pf" style="position: absolute; top: 350px; left: 50%; transform: translateX(-50%);">
+
+        <div style="position: absolute; top: 836px; left: 50%; transform: translateX(-50%); width: 1141px; border: 10px solid #707C3D; background: transparent; height: 528px; border-radius: 60px; pointer-events: none;"></div>
+
+        <img src="img/belokon/aboutme_belokon.svg" alt="about me" style="position: absolute; left: 50%; top: 912px; transform: translateX(-50%);">
+
+        <img src="img/belokon/contacts_belokon.svg" alt="contacts" style="position: absolute; top: 1433px; left: 50%; transform: translateX(-50%);">
+
+        <div style="position: absolute; top: 1554px; left: 50%; transform: translateX(-50%); width: 600px; height: 120px; background-color: #C5C7CB; border-radius: 45px; box-shadow: 5px 10px 10px rgba(0,0,0,0.25); pointer-events: none;"></div>
+
+    </div>
+
+    <!-- Иконки с фиксированным позиционированием поверх карточки -->
+    <div style="position: relative; bottom: 125px; left: 50%; transform: translateX(-50%); display: flex; gap: 60px; justify-content: center; align-items: center; z-index: 100;">
+        <a href="https://t.me/overrrdossse" target="_blank" rel="noopener noreferrer">
+            <img src="img/belokon/tg_belokon.svg" alt="Telegram" class="social-icon" style="width: auto; height: auto;">
+        </a>
+        <a href="mailto:vladislavabelokon@gmail.com">
+            <img src="img/belokon/letter_belokon.svg" alt="Email" class="social-icon" style="width: auto; height: auto;">
+        </a>
+    </div>
+
+    <div class="footer" style="position: relative; width: 100%; height: 67px; background-color: #D9D9D9; opacity: 0.5; display: flex; align-items: center; justify-content: center; margin-top: 0;">
+        <div class="footer-text">2026. Владислава Белокон</div>
+    </div>
+</div>
+</body>
+</html>

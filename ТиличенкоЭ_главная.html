@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Портфолио - Тиличенко Элины</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="portfoliostyle.css" />
+</head>
+<body>
+
+<div class="page-grid">
+
+    
+    <header class="main-header">
+        <h1>Тиличенко Элина</h1>
+        <nav>
+            <ul>
+                <li><a href="ТиличенкоЭ_главная.html">обо мне</a></li>
+                <li><a href="ТиличенкоЭ_фото.html">фото</a></li>
+                <li><a href="ТиличенкоЭ_видео.html">видео</a></li>
+                <li><a href="#contacts">контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero-title">
+        <h2>Портфолио Тиличенко Элины</h2>
+        <p>графический дизайнер</p>
+    </div>
+<div class="photo-head">
+    <img src="img/изображения/для.шапки.png" alt="ШАПКА"/>
+</div>
+    <section class="about-me">
+        <h3>Обо мне</h3>
+        <div class="about-content">
+            <div class="left-column">
+                <img src="img/изображения/я.jpg" alt="Фото Элины">
+                <div class="indigo-card">
+                    <ul>
+                        <li>фирменный стиль/брендинг</li>
+                        <li>инфографика</li>
+                        <li>3D-моделирование</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text">
+                <p>Привет! Меня зовут Элина...</p>
+                <p>Моя история в дизайне началась задолго до первого макета в Figma — с художественной школы, где мне привили любовь к композиции и чувству прекрасного. Сейчас я углубляю эти знания на направлении «Промышленный дизайн» в СПбГУПТД (Санкт-Петербургском государственном университете промышленных технологий и дизайна). Учусь работать с формой, материалами и создавать не просто красивые, но и эргономичные вещи.
+                Я графический дизайнер, который умеет слышать задачи и доводить проекты до конца. Мой процесс похож на сборку пазла: я люблю вникать в детали, задавать правильные вопросы и искать референсы до тех пор, пока в голове не щёлкнет: «Вот оно!».
+                Кстати, умение работать на результат и чувство ритма мне отлично развивает моё увлечение — я участница сборной университета по танцам. Это научило меня дисциплине, командной работе и умению держать баланс между творчеством и строгой структурой. 
+                Сейчас я в поиске интересных проектов, в которые смогу вложить всю свою насмотренность, академическую базу и любовь к деталям. Если чувствуете, что нам по пути — давайте создавать красоту вместе!</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <div class="projects">
+        <div class="grey-title-card">
+        <h4>Также создаю стикеры и принты</h4>
+    </div>
+
+        <div class="project-carousel">
+            <div class="project-item">
+                <a href="https://t.me/+V-bIsgfc0BwyMzUy" class="project-link">
+                    <img src="img/изображения/стикеры.jpg" alt="апрель 24" />
+                </a>
+                <p>апрель '24</p>
+            </div>
+            <div class="project-item">
+                <a href="https://t.me/+V-bIsgfc0BwyMzUy" class="project-link">
+                    <img src="img/изображения/футболка.jpg" alt="май 25" />
+                </a>
+                <p>май '25</p>
+            </div>
+            <div class="project-item">
+                <a href="https://t.me/+V-bIsgfc0BwyMzUy" class="project-link">
+                    <img src="img/изображения/шоперы.jpg" alt="февраль 26" />
+                </a>
+                <p>февраль '26</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<footer class="footer" id="contacts">
+    <div class="footer-info">
+        <p>Тиличенко Элина</p>
+        <p>email: tilichenkoelia@mail.ru</p>
+    </div>
+    <a href="#modal" class="footer-btn">Задать вопрос</a>
+</footer>
+
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Задать вопрос</h3>
+            <a href="#" class="modal-close">&times;</a>
+        </div>
+        <form class="form">
+            <div class="form-group">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required placeholder="Иван Иванов">
+            </div>
+            <div class="form-group">
+                <label for="email">Email для ответа:</label>
+                <input type="email" id="email" name="email" required placeholder="ivan@example.com">
+            </div>
+            <div class="form-group">
+                <label for="subject">Тема вопроса:</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Выберите тему</option>
+                    <option value="design">Дизайн-проект</option>
+                    <option value="price">Стоимость услуг</option>
+                    <option value="deadline">Сроки выполнения</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Ваш вопрос:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Опишите ваш вопрос подробнее..."></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-checkbox">
+                    <input type="checkbox" required>
+                    Я согласен на обработку персональных данных
+                </label>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" class="form-submit">Отправить вопрос</button>
+                <a href="#" class="form-cancel">Отмена</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

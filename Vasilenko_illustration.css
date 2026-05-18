@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #7d77aa;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 60px;
+}
+
+.logo-img {
+  height: 40px;
+  font-size: 5px;
+  margin-left: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 70px;
+}
+
+nav a {
+  background: #554b82;
+  padding: 7px 13px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 260px;
+  background: linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35)),
+              url("assets/illustrations-hero.jpg") center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 15px solid white;
+  border-bottom: 15px solid white;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+/* MAIN */
+main {
+  padding: 40px 70px 90px;
+}
+
+/* INFO */
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+}
+
+.text {
+  width: 45%;
+}
+
+.text h2,
+.section-title {
+  background: #554b82;
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.text p {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* ICONS */
+.icons {
+  width: 45%;
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 30px;
+  justify-content: center;
+}
+
+.icons img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* TABLET */
+.tablet {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.tablet img {
+  width: 30%;
+  border: 6px solid white;
+}
+
+.tablet p {
+  width: 40%;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* GRID */
+.section-title {
+  margin-top: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 120px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.card img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border: 6px solid white;
+}
+
+.card p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #635b91;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 10px;
+}
+
+button {
+  background: #554b82;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 13px;
+}

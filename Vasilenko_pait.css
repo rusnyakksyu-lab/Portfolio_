@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #7d77aa;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  height: 55px;
+  background: #7d77aa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 55px;
+}
+
+.logo-img {
+  height: 40px;
+  font-size: 5px;
+  margin-left: 10px;
+}
+nav {
+  display: flex;
+  gap: 70px;
+}
+
+nav a {
+  background: #554b82;
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.hero {
+  height: 270px;
+  background: linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.25)),
+              url("assets/painting-hero.jpg") center/cover;
+  border-top: 12px solid white;
+  border-bottom: 12px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+main {
+  padding: 25px 50px 90px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 55px;
+  align-items: flex-start;
+}
+
+.text {
+  width: 42%;
+}
+
+.text h2,
+.section-title {
+  display: inline-block;
+  background: #554b82;
+  padding: 7px 12px;
+  border-radius: 6px;
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.text p {
+  font-size: 21px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.info img {
+  width: 50%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.section-title {
+  margin-top: 35px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px 120px;
+  justify-items: center;
+  margin-top: 15px;
+}
+
+.card {
+  text-align: center;
+}
+
+.card img {
+  width: 320px;
+  height: 360px;
+  object-fit: cover;
+  border: 5px solid white;
+}
+
+.card p,
+.big-card p {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.big-card {
+  text-align: center;
+  margin: 35px 0;
+}
+
+.big-card img {
+  width: 420px;
+  height: 280px;
+  object-fit: cover;
+  border: 5px solid white;
+}
+
+footer {
+  background: #635b91;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 10px;
+}
+
+button {
+  background: #554b82;
+  color: white;border: none;
+  border-radius: 8px;
+  padding: 7px 13px;
+  font-size: 16px;
+}
+
+

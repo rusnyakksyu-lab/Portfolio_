@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Творческое объединение | Банк портфолио</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: 'Manrope', sans-serif;
+            color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* Grid-таблица */
+        .grid-table {
+            display: grid;
+            grid-template-columns: 400px 600px;
+            grid-template-rows: 280px 360px 15px;
+            gap: 0 200px;
+            width: 1200px;
+        }
+
+        /* Общие стили для ячеек */
+        .cell {
+            position: relative;
+        }
+
+        /* Ячейка 11 */
+        .cell-11 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+        .title-extrabold {
+            font-weight: 800;
+            font-size: 52pt;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Ячейка 12 */
+        .cell-12 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        .subtitle-regular {
+            font-weight: 400;
+            font-size: 32pt;
+            line-height: 1.2;
+            position: absolute;
+            right: -27%;
+            top: -10%;
+            transform: translateY(-50%);
+        }
+
+        /* Ячейка 13 */
+        .cell-13 {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+        .year {
+            font-weight: 400;
+            font-size: 12pt;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Второй столбец - растягиваем на 3 строки */
+        .cell-21 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 4;
+        }
+        .cell-22, .cell-23 {
+            display: none;
+        }
+        
+        .carousel-container {
+            position: relative;
+            width: 600px;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+        }
+
+        .carousel-slide a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 2px solid #000000;
+            box-sizing: border-box;
+            transition: box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .carousel-slide img:hover {
+            box-shadow: 5px 10px 0px #888888;
+        }
+
+        .carousel-prev, .carousel-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 10;
+            transition: background-color 0.2s;
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
+        }
+
+        .carousel-prev:hover, .carousel-next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 1300px) {
+            body {
+                overflow-x: auto;
+                display: block;
+            }
+            .grid-table {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-table">
+        <!-- Первый столбец -->
+        <div class="cell cell-11">
+            <div class="title-extrabold">ТВОРЧЕСКОЕ<br>ОБЪЕДИНЕНИЕ</div>
+        </div>
+        <div class="cell cell-12">
+            <div class="subtitle-regular">банк портфолио</div>
+        </div>
+        <div class="cell cell-13">
+            <div class="year">2026</div>
+        </div>
+
+        <!-- Второй столбец -->
+        <div class="cell cell-21">
+            <div class="carousel-container">
+                <div class="carousel-slides">
+                    <div class="carousel-slide">
+                        <a href="главная_belokon.html">
+                            <img src="img/belokon/коллаж_belokon.png" alt="Владислава Белокон">
+                        </a>
+                    </div>
+                    <div class="carousel-slide">
+                        <a href="Василенко/сайт2/Vasilenko_glavnaya.html">
+                            <img src="img/belokon/коллаж_vasilenko.png" alt="Дарья Василенко">
+                        </a>
+                    </div>
+                    <div class="carousel-slide">
+                        <a href="РуснякК_сайт_портфолио/RusnyakK_index.html">
+                            <img src="img/belokon/коллаж_rusnyak.png" alt="Ксения Русняк">
+                        </a>
+                    </div>
+                    <div class="carousel-slide">
+                        <a href="ТиличенкоЭ ПОРТФОЛИО/ТиличенкоЭ_главная.html">
+                            <img src="img/belokon/коллаж_tilichenco.png" alt="Элина Тиличенко">
+                        </a>
+                    </div>
+                    <div class="carousel-slide">
+                        <a href="Рожкова/index.html">
+                            <img src="img/belokon/коллаж_rozhkova.png" alt="Мария-Эмилия Рожкова">
+                        </a>
+                    </div>
+                    <div class="carousel-slide">
+                        <a href="ЖуравлеваА_portfolio/ЖуравлеваА_portfolio.html">
+                            <img src="img/belokon/коллаж_zuravleva.png" alt="Арина Журавлёва">
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-prev">‹</button>
+                <button class="carousel-next">›</button>
+            </div>
+        </div>
+        <div class="cell cell-22"></div>
+        <div class="cell cell-23"></div>
+    </div>
+</body>
+</html>
+
+<script>
+    const slidesContainer = document.querySelector('.carousel-slides');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    let autoInterval;
+
+    function updateCarousel() {
+        slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+        resetAutoPlay();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+        resetAutoPlay();
+    }
+
+    function startAutoPlay() {
+        autoInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetAutoPlay() {
+        clearInterval(autoInterval);
+        startAutoPlay();
+    }
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    startAutoPlay();
+</script>
